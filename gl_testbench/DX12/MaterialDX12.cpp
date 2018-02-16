@@ -77,10 +77,10 @@ int MaterialDX12::compileMaterial(std::string & errString)
         
         shaderCode = defines + shaderCode;
 
+        /*/Write complete shader to file 
         std::ofstream fout(fileName + "_defines.hlsl");
         fout << shaderCode;
-        fout.close();
-
+        fout.close(); //*/
 
         UINT compileFlags = 0;
         #ifdef _DEBUG
