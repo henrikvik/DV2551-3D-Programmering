@@ -125,7 +125,7 @@ void renderScene()
 	renderer->frame();
 	renderer->present();
 	updateDelta();
-	sprintf(gTitleBuff, "OpenGL - %3.0lf", gLastDelta);
+	sprintf(gTitleBuff, "DX12 - %3.0lf", gLastDelta);
 	renderer->setWinTitle(gTitleBuff);
 }
 
@@ -300,9 +300,9 @@ void shutdown() {
 
 int main(int argc, char *argv[])
 {
-	renderer = Renderer::makeRenderer(Renderer::BACKEND::GL45);
+	renderer = Renderer::makeRenderer(Renderer::BACKEND::DX12);
 	renderer->initialize(800,600);
-	renderer->setWinTitle("OpenGL");
+	renderer->setWinTitle("DX12");
 	renderer->setClearColor(0.0, 0.1, 0.1, 1.0);
 	initialiseTestbench();
 	run();

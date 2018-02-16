@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gl_testbench", "gl_testbench\gl_testbench.vcxproj", "{0A6119F8-5444-4072-AD5C-CABCE1AF14C2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{FB1ED60A-5A99-4AE9-9A1D-B116A714E0DB}"
+	ProjectSection(SolutionItems) = preProject
+		assets\DX12\FragmentShader.hlsl = assets\DX12\FragmentShader.hlsl
+		assets\DX12\VertexShader.hlsl = assets\DX12\VertexShader.hlsl
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,5 +34,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {036B48D7-E55A-4FD6-8A51-E5E0AF870309}
 	EndGlobalSection
 EndGlobal

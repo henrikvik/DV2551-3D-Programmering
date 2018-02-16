@@ -71,20 +71,20 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>..\include;D:\francholi\source\gl_testbench\SDL\include;$(IncludePath)</IncludePath>
+    <IncludePath>..\SDL\include;..\include;D:\francholi\source\gl_testbench\SDL\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>..\include;..\GLEW\include;..\SDL\include;$(IncludePath);..\;</IncludePath>
+    <IncludePath>..\SDL\include;..\include;..\GLEW\include;..\SDL\include;$(IncludePath);..\;</IncludePath>
     <LibraryPath>..\GLEW\lib\Release\x64;..\SDL\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>..\include;D:\francholi\source\gl_testbench\SDL\include;$(IncludePath)</IncludePath>
+    <IncludePath>..\SDL\include;..\include;D:\francholi\source\gl_testbench\SDL\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>..\include;..\GLEW\include;..\SDL\include;$(IncludePath);..\;</IncludePath>
+    <IncludePath>..\SDL\include;..\include;..\GLEW\include;..\SDL\include;$(IncludePath);..\;</IncludePath>
     <LibraryPath>..\GLEW\lib\Release\x64;..\SDL\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -94,6 +94,8 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>
+      </LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -107,6 +109,8 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>
+      </LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -122,6 +126,8 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>
+      </LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,6 +145,8 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>
+      </LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -149,6 +157,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ConstantBuffer.cpp" />
+    <ClCompile Include="DX12\ConstantBufferDX12.cpp" />
+    <ClCompile Include="DX12\Helper.cpp" />
+    <ClCompile Include="DX12\MaterialDX12.cpp" />
+    <ClCompile Include="DX12\MeshDX12.cpp" />
+    <ClCompile Include="DX12\RendererDX12.cpp" />
+    <ClCompile Include="DX12\RenderStateDX12.cpp" />
+    <ClCompile Include="DX12\Sampler2DDX12.cpp" />
+    <ClCompile Include="DX12\TechniqueDX12.cpp" />
+    <ClCompile Include="DX12\Texture2DDX12.cpp" />
+    <ClCompile Include="DX12\VertexBufferDX12.cpp" />
     <ClCompile Include="OpenGL\ConstantBufferGL.cpp" />
     <ClCompile Include="OpenGL\MaterialGL.cpp" />
     <ClCompile Include="OpenGL\MeshGL.cpp" />
@@ -175,6 +193,17 @@
   <ItemGroup>
     <ClInclude Include="..\include\stb_image.h" />
     <ClInclude Include="ConstantBuffer.h" />
+    <ClInclude Include="DX12\ConstantBufferDX12.h" />
+    <ClInclude Include="DX12\d3dx12.h" />
+    <ClInclude Include="DX12\Helper.h" />
+    <ClInclude Include="DX12\MaterialDX12.h" />
+    <ClInclude Include="DX12\MeshDX12.h" />
+    <ClInclude Include="DX12\RendererDX12.h" />
+    <ClInclude Include="DX12\RenderStateDX12.h" />
+    <ClInclude Include="DX12\Sampler2DDX12.h" />
+    <ClInclude Include="DX12\TechniqueDX12.h" />
+    <ClInclude Include="DX12\Texture2DDX12.h" />
+    <ClInclude Include="DX12\VertexBufferDX12.h" />
     <ClInclude Include="OpenGL\ConstantBufferGL.h" />
     <ClInclude Include="OpenGL\MaterialGL.h" />
     <ClInclude Include="OpenGL\MeshGL.h" />
